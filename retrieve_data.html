@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+	$con=mysqli_connect("localhost","root","","products");
+if(!$con)
+	die("Error: " . mysql_connect_error());
+$sql = "select * from product_details where c_name=$cname";
+$result = $con->query($sql);
+$row = mysqli_fetch_assoc($result);
+echo "<h1>Seller name:  ". $row["c_name"]. " -Seller e-mail Id: ". $row["c_email"]. " " . $row["lastname"] . "<h1>";
+
+$con->close();
+?>
+
+</body>
+</html>

@@ -45,8 +45,14 @@ button:hover {
 /* Extra styles for the cancel button */
 .cancelbtn {
   padding: 14px 20px;
-  background-color: #f44336;
+  background-color: #000000;
 }
+/* Extra styles for the cancel button */
+.signupbtn {
+  padding: 14px 20px;
+  background-color: #ffa500;
+}
+
 
 /* Float cancel and signup buttons and add an equal width */
 .cancelbtn, .signupbtn {
@@ -74,11 +80,14 @@ button:hover {
 }
 </style>
 <body>
-<form action="action_page.php" style="border:1px solid #ccc">
+<form action="register.php" style="border:1px solid #ccc" method="post">
   <div class="container">
-    <h1>Sign Up</h1>
+    <h1 align="center">Sign Up</h1>
     <p>Please fill in this form to create an account.</p>
     <hr>
+	
+	<label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
 
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" required>
